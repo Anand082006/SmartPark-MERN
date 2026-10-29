@@ -337,3 +337,149 @@ body {
 .book-button:hover {
   background: #0b5ed7;
 }
+
+/* ==============================
+   MY BOOKINGS - QR TICKET FIX
+   ============================== */
+
+/* Cards ko available space ke andar rakhein */
+.booking-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+  min-width: 0;
+}
+
+.cards .card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 380px;
+  min-width: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Long location aur text ko wrap karein */
+.cards .card h3,
+.cards .card p {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* QR ticket card ke andar rahe */
+.parking-ticket {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 20px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #222;
+  overflow: hidden;
+}
+
+/* Booking ID ko multiple lines mein dikhayein */
+
+
+.booking-id {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 12px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.booking-id strong {
+  text-align: center;
+}
+
+.booking-id span {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  line-break: anywhere;
+}
+
+
+/* QR code ko center mein aur card ke andar rakhein */
+.qr-code-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.qr-code-wrapper canvas {
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+}
+
+/* Ticket text */
+.qr-description {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Buttons card se bahar na niklein */
+.booking-action-button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+/* Mobile screen */
+@media (max-width: 768px) {
+  .content {
+    min-width: 0;
+  }
+
+  .cards .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .parking-ticket {
+    padding: 10px;
+  }
+}
